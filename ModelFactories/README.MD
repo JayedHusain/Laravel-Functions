@@ -10,34 +10,41 @@ $factory->define(User::class, function (Faker $faker) {
     ];
 });
 ```
-same as create_users_table
-
 //Commands
+```
 php artisan tinker
 User::all()->pluck('name');
 //create single user
 factory(\App\User::class)->create();
 //create three user
 factory(\App\User::class, 3)->create();
-
+```
 -----------
 #Create Company Factory
 
 //Commands
+```
 php artisan make:factory CompanyFactory -m Company
-
+```
 //CompanyFactory.php
+```
 $factory->define(Company::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'phone' => $faker->phonenumber,
     ];
 });
-
+```
 //Commands
+```
 php artisan tinker
 Company::all()->pluck('name');
-//create single user
+```
+//create single Company
+```
 factory(\App\Company::class)->create();
-//create three user
+```
+//create three Companies
+```
 factory(\App\Company::class, 3)->create();
+```
