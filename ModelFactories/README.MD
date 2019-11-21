@@ -52,3 +52,39 @@ factory(\App\Company::class)->create();
 ```
 factory(\App\Company::class, 3)->create();
 ```
+-----------
+#Create Customer Factory
+-----------
+
+//Commands
+```
+php artisan make:factory CustomerFactory -m Customer
+```
+//CustomerFactory.php
+```
+use App\Company;
+use App\Customer;
+use Faker\Generator as Faker;
+
+$factory->define(Customer::class, function (Faker $faker) {
+    return [
+        'company_id' => factory(Company::class)->create(),
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'active' => 1,
+    ];
+});
+```
+//Commands
+```
+php artisan tinker
+Customer::all()->pluck('name');
+```
+//create single Customer
+```
+factory(\App\Customer::class)->create();
+```
+//create three Customers
+```
+factory(\App\Customer::class, 3)->create();
+```
