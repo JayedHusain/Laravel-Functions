@@ -1,5 +1,5 @@
 # Laravel-Functions
-```
+
  --- ---
 |1. |Eloquent Where Clause
  --- ---
@@ -12,4 +12,4 @@
 |5. |Model Factories
  --- ---
 |6. |Seeding Database using Model Factories
-```
+
