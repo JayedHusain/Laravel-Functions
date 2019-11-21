@@ -1,3 +1,6 @@
+-----------
+#Create User Factory
+-----------
 //UserFactory.php 
 ```
 $factory->define(User::class, function (Faker $faker) {
@@ -21,6 +24,7 @@ factory(\App\User::class, 3)->create();
 ```
 -----------
 #Create Company Factory
+-----------
 
 //Commands
 ```
