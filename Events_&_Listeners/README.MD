@@ -51,8 +51,16 @@ php artisan event:generate
 use App\Mail|WelcomeNewUserMail;
 use Illuminate\Support\Facades\Mail;
 
-public function handle($event)
+class WelcomeNewCustomerListener implements ShouldQueue 
 {
-  Mail::to($event->customer->email)->semd(new WelcomeNewUserMail());
+    public function handle($event)
+    {
+      sleep(10);
+      Mail::to($event->customer->email)->semd(new WelcomeNewUserMail());
+    }
 }
+```
+//env
+```
+QUEUE_CONNECTION=database
 ```
