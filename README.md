@@ -1,5 +1,11 @@
-# Laravel-Functions
-| --- | --- |
+
+- Eloquent Where Clause
+- Eloquent Scopes
+- Eloquent BelongsTo & HasMany Relationships |
+- Events & Listeners with queue |
+- Model Factories |
+- Seeding Database using Model Factories |
+--------------
 | 1 | Eloquent Where Clause |
 | --- | --- |
 | 2 | Eloquent Scopes |
@@ -11,4 +17,3 @@
 | 5 | Model Factories |
 | --- | --- |
 | 6 | Seeding Database using Model Factories |
-| --- | --- |
